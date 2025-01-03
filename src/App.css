@@ -1,38 +1,46 @@
-.App {
-  text-align: center;
+.app-container {
+  @apply min-h-screen flex flex-col bg-transparent;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.content-wrapper {
+  @apply container mx-auto px-4 py-8 flex-grow;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.spa-background {
+  @apply fixed inset-0 z-0 opacity-10;
+  /* background-image: url('path/to/your/spa-background-image.jpg'); */
+  background-size: cover;
+  background-position: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.header {
+  @apply bg-white shadow-md;
 }
 
-.App-link {
-  color: #61dafb;
+.header-content {
+  @apply container mx-auto px-4 py-4 flex justify-between items-center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logo {
+  @apply text-2xl font-bold text-blue-600;
+}
+
+.nav-links {
+  @apply flex space-x-8;
+}
+
+.nav-link {
+  @apply text-lg font-semibold text-gray-700 hover:text-blue-600 transition duration-300;
+}
+
+.main-content {
+  @apply mt-8 bg-white rounded-lg shadow-lg p-8;
+}
+
+.footer {
+  @apply bg-gray-800 text-white mt-auto;
+}
+
+.footer-content {
+  @apply container mx-auto px-4 py-6 text-center;
 }
